@@ -1,3 +1,4 @@
+package tp0;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.BufferedWriter;
@@ -23,7 +24,7 @@ import java.util.Random;
 public class Ejemplo_2_randomInts {
     static final int CANTNUMEROS = 10000;
     static final int MAX_VALOR = 1000000;
-    static final String NOMBRE_ARCHIVO = "src/ejemplo_InOut/numeros.txt";
+    static final String NOMBRE_ARCHIVO = "tp0/numeros.txt";
 
     private static void generarArchivo(){
     	try{

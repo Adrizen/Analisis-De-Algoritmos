@@ -1,3 +1,4 @@
+package tp0;
 public class Alumno implements Comparable {
     private String nombre;
     private double notaBiologia;

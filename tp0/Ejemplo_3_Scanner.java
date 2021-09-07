@@ -1,3 +1,4 @@
+package tp0;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
@@ -20,7 +21,7 @@ import java.util.Scanner;
 public class Ejemplo_3_Scanner {
 	static final int CANTNUMEROS = 10;
 	static final int MAX_VALOR = 1000000;
-	static final String NOMBRE_ARCHIVO = "numeros.txt";
+	static final String NOMBRE_ARCHIVO = "tp0/numeros.txt";
 
 	private static void leerArchivo_1() {
 		try {
@@ -40,7 +41,7 @@ public class Ejemplo_3_Scanner {
 
 	private static void leerArchivo_2() {
 		try {
-			BufferedReader buff = new BufferedReader(new FileReader("ejemplo_scanner.txt"));
+			BufferedReader buff = new BufferedReader(new FileReader("tp0/ejemplo_scanner.txt"));
 			Scanner s = new Scanner(buff);
 			//Si falla la lectura del float, cambiar el '.' por coma, cuestion de configuracion de idiomas.
 			s = new Scanner("123141   4243,433     unaPalabra\no muchas palabras seguidas.");
@@ -58,8 +59,8 @@ public class Ejemplo_3_Scanner {
 	}
 
 	public static void main(String[] args) {
-		//leerArchivo_1();
-		//leerArchivo_2();
+		leerArchivo_1();
+		leerArchivo_2();
 		ejercicio4(50);	// (topeSuperiorNumeroMisterioso)
 
 		// Inicio ejercicio9.

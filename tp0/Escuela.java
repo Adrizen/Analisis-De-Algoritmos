@@ -1,3 +1,4 @@
+package tp0;
 import java.util.ArrayList;
 
 public class Escuela {

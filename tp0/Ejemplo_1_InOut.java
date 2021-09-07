@@ -1,3 +1,4 @@
+package tp0;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.BufferedWriter;
@@ -23,8 +24,8 @@ public class Ejemplo_1_InOut {
          * "src/ejemplo_InOut/" porque va a fallar la creacion y apertura de archivos al
          * apuntar a rutas que no existan.
          */
-        String nombreArchivoEntrada = "entrada.txt";
-        String nombreArchivoSalida = "salida.txt";
+        String nombreArchivoEntrada = "tp0/entrada.txt";
+        String nombreArchivoSalida = "tp0/salida.txt";
         /**
          * Mientras manipulamos archivos de text, será común que operemos con strings
          * que representaran lineas de texto.
@@ -42,15 +43,15 @@ public class Ejemplo_1_InOut {
              * salida estandar (consola) https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html
              */
             // Ejercicio 1.
-            FileWriter escritorArchivoSinEspacios = new FileWriter("sinEspacios.txt");
+            FileWriter escritorArchivoSinEspacios = new FileWriter("tp0/sinEspacios.txt");
             // Ejercicio 2.
-            FileWriter escritorArchivoLineasImpares = new FileWriter("lineasImpares.txt");
+            FileWriter escritorArchivoLineasImpares = new FileWriter("tp0/lineasImpares.txt");
             // Ejercicio 3.
-            FileWriter escritorArchivoNumerosAleatorios = new FileWriter("numerosAleatorios.txt");
+            FileWriter escritorArchivoNumerosAleatorios = new FileWriter("tp0/numerosAleatorios.txt");
             // Ejercicio 4.
-            FileWriter escritorArchivoCadenasAleatorias = new FileWriter("cadenasAleatorias.txt");
+            FileWriter escritorArchivoCadenasAleatorias = new FileWriter("tp0/cadenasAleatorias.txt");
             // Ejercicio 5.
-            FileWriter escritorArchivoNumeros1a1000Aleatorios = new FileWriter("numeros1a1000Aleatorios.txt");
+            FileWriter escritorArchivoNumeros1a1000Aleatorios = new FileWriter("tp0/numeros1a1000Aleatorios.txt");
             /*
              * Si bien no es obligatorio, se recomienda fuertemente: Usar buffer para la
              * entrada/salida de un archivo de texto Mejorar la performance de las
