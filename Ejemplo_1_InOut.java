@@ -84,9 +84,9 @@ public class Ejemplo_1_InOut {
                 ejercicio2(linea, bufferEscrituraLineasImpares, numeroLinea); // lineas impares.
                 numeroLinea++;
             }
-            ejercicio3(bufferEscributraNumerosAleatorios);
+            ejercicio3(bufferEscributraNumerosAleatorios,-100,100);
             ejercicio4(bufferEscrituraCadenasAleatorias, 10, 10);
-            ejercicio5(bufferEscrituraNumeros1a1000Aleatorios);
+            ejercicio5(bufferEscrituraNumeros1a1000Aleatorios,1000);
             /*
              * Para evitar que los archivos corran riesgo de quedar corruptos, es
              * conveniente cerrarlos. Cerrando el buffer que envuelve un archivo este se
@@ -124,11 +124,11 @@ public class Ejemplo_1_InOut {
     }
 
     // Método correspondiente al Ejercicio 3.
-    public static void ejercicio3(BufferedWriter bufferEscributraNumerosAleatorios) throws IOException {
+    public static void ejercicio3(BufferedWriter bufferEscributraNumerosAleatorios, int topeMinimo, int topeMaximo) throws IOException {
         Random r = new Random();
         DecimalFormat formatoDecimal = new DecimalFormat("#.##"); // Un máximo de 2 decimales para cada double.
         for (int i = 0; i < 100; i++) {
-            double valorAleatorio = -100 + (100 - (-100)) * r.nextDouble(); // Valor aleatorio entre -100 y 100.
+            double valorAleatorio = topeMinimo + (topeMaximo - (topeMinimo)) * r.nextDouble(); // Valor aleatorio entre -100 y 100.
             bufferEscributraNumerosAleatorios.write(formatoDecimal.format(valorAleatorio) + "\n"); // Se escribe en el txt.
 
         }
@@ -151,14 +151,14 @@ public class Ejemplo_1_InOut {
     }
 
     // Método correspondiente al Ejercicio 5.
-    public static void ejercicio5(BufferedWriter bufferEscrituraNumeros1a1000Aleatorios) throws IOException{
+    public static void ejercicio5(BufferedWriter bufferEscrituraNumeros1a1000Aleatorios, int tamañoLista) throws IOException{
         ArrayList<Integer> lista = new ArrayList<Integer>(1000);
         // Genero una lista con los números del 1 al 1000.
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < tamañoLista; i++) {
             lista.add(i);
         }
         // Por cada elemento de la lista, elijo uno al azar y lo escribo en el txt. Luego lo elimino de la lista para no repetirlo.
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < tamañoLista; i++) {
             int indice = (int) (lista.size() * Math.random());
             bufferEscrituraNumeros1a1000Aleatorios.write(lista.get(indice) + "\n");
             lista.remove(indice);

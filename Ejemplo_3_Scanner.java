@@ -60,8 +60,10 @@ public class Ejemplo_3_Scanner {
 	public static void main(String[] args) {
 		//leerArchivo_1();
 		//leerArchivo_2();
-		//ejercicio4(50);	// (topeSuperiorNumeroMisterioso)
+		ejercicio4(50);	// (topeSuperiorNumeroMisterioso)
 
+		// Inicio ejercicio9.
+		System.out.println("----------Inicio resolución ejercicio 9----------");
 		ArrayList<Integer> listaA = generarListaConNumerosAleatorios(100, 100); // (longitud, topeNumeroAleatorio)
 		System.out.println("Longitud listaA: " + listaA.size());
 		System.out.println("Lista A desordenada: " + listaA.toString());
@@ -71,14 +73,15 @@ public class Ejemplo_3_Scanner {
 		long tiempoInicio = System.nanoTime();
 		ArrayList<Integer> listaC = ejercicio9(listaA, listaB);
 		long tiempoFinal = System.nanoTime();
-		System.out.println("Tiempo tomado para resolver el ejercicio 9: "+ (tiempoFinal - tiempoInicio));
+		// desactivar el ejercicio 4 si se va a tomar el tiempo de ejecución aquí.
+		//System.out.println("Tiempo tomado para resolver el ejercicio 9: "+ (tiempoFinal - tiempoInicio));	
 		System.out.println("Longitud listaC: " + listaC.size());
 		System.out.println("Lista C: " + listaC.toString());
 	}
 
 	public static void ejercicio4(int topeSuperiorNumeroMisterioso) {
 		int numeroMisterioso = (int) (Math.random() * topeSuperiorNumeroMisterioso); // Se genera el número misterioso de manera aleatoria.
-		System.out.println(numeroMisterioso); // Debug.
+		//System.out.println(numeroMisterioso); // Debug.
 		int numeroUsuario; // El número elegido por el usuario.
 		boolean exito = false; // Cortar el while si el usuario adivina el número misterioso.
 		Scanner sc = new Scanner(System.in);
@@ -100,7 +103,7 @@ public class Ejemplo_3_Scanner {
 	}
 
 	public static ArrayList<Integer> ejercicio9(ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
-		ArrayList<Integer> listaC = new ArrayList<Integer>(160);
+		ArrayList<Integer> listaC = new ArrayList<Integer>(listaA.size()+listaB.size());
 		int indiceA = 0, indiceB = 0;
 		// ordenando las listas por dos métodos diferentes.
 		listaA.sort((o1, o2) -> (o1).compareTo(o2));
